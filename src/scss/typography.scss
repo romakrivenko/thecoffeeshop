@@ -1,0 +1,61 @@
+body {
+  font-family: 'Lato', san-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: $green;
+  @include xxl {
+    font-size: 24px;
+  }
+  @include xl {
+    font-size: 20px;
+  }
+  @include sm {
+    font-size: 16px;
+  }
+}
+
+@mixin font($ff,$sz,$wg,$fs,$tt,$ls,$lh){
+  font-family: $ff;
+  font-size: $sz;
+  letter-spacing: $ls;
+  font-weight: $wg;
+  font-style: $fs;
+  text-transform: $tt;
+  line-height: $lh;
+}
+
+.title, .title_alt {
+  @include font('Viridian',60px,400,normal,uppercase,-0.0025em,normal);
+  @include xxl {
+    font-size: 48px;
+  }
+  @include xl {
+    font-size: 36px;
+  }
+  @include sm {
+    font-size: 24px;
+  }
+}
+
+.title_alt {
+  font-size: 30px;
+  @include xxl {
+    font-size: 22px;
+  }
+  @include xl {
+    font-size: 20px;
+  }
+  @include sm {
+    font-size: 16px;
+  }
+}
+
+.text {
+  @include font('Lato',30px,400,normal,none,0,1.4);
+  @include xxl {
+    font-size: 24px;
+  }
+  @include sm {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,65 @@
+// variables
+
+$centerBlock: 0 auto;
+
+$minWidth: 320;
+$ipad: 1024;
+$laptop: 1440;
+$maxWidth: 1700;
+
+$white: #fff;
+$orange: #f0612f;
+$green: rgba(8, 58, 33, 1);
+$greenBg: rgba(8, 58, 33, .9);
+$greenBg6: rgba(8, 58, 33, .6);
+$lightGreen: #8fb18f;
+
+$screen-sm-max: 576px;
+$screen-md-max: 768px;
+$screen-lg-max: 992px;
+$screen-xl-max: 1200px;
+$screen-xxl-max: 1600px;
+
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media (max-width: #{$screen-xxl-max}) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}
+
+%linkNoDecoration {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+%borders {
+  border-bottom: 6px solid $orange;
+  border-top: 6px solid $orange;
+}

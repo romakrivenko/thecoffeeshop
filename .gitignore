@@ -1,0 +1,8 @@
+.idea/
+node_modules
+npm-debug.log
+gulp
+.DS_Sgit tore
+package-lock.json
+siberie.zip
+dist
