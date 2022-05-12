@@ -1,7 +1,6 @@
 .idea/
 node_modules
 npm-debug.log
-gulp
 .DS_Store
 siberie.zip
 dist
