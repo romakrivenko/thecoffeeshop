@@ -3,6 +3,5 @@ node_modules
 npm-debug.log
 gulp
 .DS_Store
-package-lock.json
 siberie.zip
 dist
