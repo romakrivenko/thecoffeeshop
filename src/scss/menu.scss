@@ -1,110 +1,178 @@
-.menu {
-  width: 100%;
-  max-height: 170px;
-  padding: 55px 44px 58px 37px;
+.header {
   position: fixed;
-  background: $greenBg;
-  color: #ffffff;
-  line-height: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 9999;
-  @include xxl {
-    padding: 25px 22px 29px 18px;
-  }
-  @include xl {
-    padding: 20px 12px 22px 10px;
-  }
-  @include sm {
-    padding: 12px 8px 12px 8px;
-  }
-  &__short {
+  transition: all .5s ease-in-out;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-height: 170px;
-    padding: 15px 44px 18px 37px;
-    position: fixed;
+    height: 100%;
     background: $greenBg;
-    color: #ffffff;
-    line-height: 1;
-    z-index: 9999;
-    font-size: .6em;
+    z-index: 2;
   }
+}
+.menu {
+  position: relative;
+  padding: 0 1em;
+  width: 100%;
+  //@include lg {
+  //  position: fixed;
+  //  top: 0;
+  //  left: 0;
+  //  width: 100%;
+  //  height: 100%;
+  //  background: $greenBg;
+  //  &:before {
+  //    content: '';
+  //    position: absolute;
+  //    top: 0;
+  //    left: 0;
+  //    width: 100%;
+  //    height: 100%;
+  //    background: $greenBg;
+  //    z-index: 2;
+  //  }
+  //}
   &__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    min-height: 60px;
+    height: 15vh;
+    @include xl {
+      height: 10vh;
+    }
+    @include lg {
+      max-height: 80px;
+    }
   }
   &__logo {
-    white-space: pre;
+    flex: 0 0 486px;
     position: relative;
-    padding: 11px 0;
-    color: #ffffff;
-    margin-left: 80px;
-    margin-top: 0;
-    @extend %linkNoDecoration;
+    overflow: hidden;
+    z-index: 3;
     @include xxl {
-      padding: 11px 0;
-      margin-left: 60px;
+      flex: 0 0 360px;
     }
     @include xl {
-      padding: 11px 0;
-      margin-left: 45px;
+      flex: 0 0 322px;
     }
     @include sm {
-      padding: 11px 0;
-      margin-left: 38px;
+      flex: 0 0 260px;
     }
-    &:before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 74px;
-      top: 0;
-      margin-left: -80px;
-      float: left;
-      background: url('../img/siberie_logo.svg') no-repeat;
+
+    img {
+      max-width: 100%;
       display: block;
-      @include xxl {
-        height: 100%;
-        width: 56px;
-        margin-left: -60px;
-      }
-      @include xl {
-        height: 100%;
-        width: 44px;
-        top: 6px;
-        margin-left: -45px;
-      }
-      @include sm {
-        height: 100%;
-        width: 36px;
-        margin-left: -38px;
-        top: 6px;
+    }
+  }
+  &__list_container {
+    @include lg {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      transition: all 0.3s ease 0s;
+      padding: 120px 10px 20px 10px;
+      z-index: 2;
+      font-size: 40px;
+      text-align: center;
+      .active {
+        top: 0;
       }
     }
   }
-  &__icon {max-width: 86px;}
   &__list {
     display: flex;
     flex-direction: row;
-    list-style-type: none;
-    @include xxl {
-      display: flex;
+    flex: 1;
+    justify-content: end;
+    position: relative;
+    z-index: 2;
+    @include lg {
+      display: block;
     }
-    @include xl {
-      display: none;
-    }
-    @include sm {
-      display: none;
+    li {
+      margin-left: 5%;
+      list-style-type: none;
+      @include lg {
+        margin-bottom: 1em;
+      }
     }
   }
   &__item {
-    margin-left: 60px;
-    > a {
-      color: #fff;
-      @extend %linkNoDecoration;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+.hamburger {
+  display: none;
+  @include lg {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 28px;
+    z-index: 3;
+    &:before, &:after {
+      content: '';
+      background: $white;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      transition: all 0.3s ease 0s;
     }
-    &:first-of-type {
-      margin-left: 0;
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+    span {
+      background: $white;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      top: 12px;
+      transition: all 0.3s ease 0s;
     }
   }
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.active {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: $greenBg;
+  z-index: 1;
+
+}
+
+.open span{
+  transform: scale(0);
+}
+.open:before{
+  transform:rotate(45deg);
+  top: 12px;
+}
+.open:after{
+  transform:rotate(-45deg);
+  bottom: 13px;
+}
+.lock{
+  overflow: hidden;
 }

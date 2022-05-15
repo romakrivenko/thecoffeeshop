@@ -282,8 +282,6 @@
 		z-index: 1;
 		color: $white;
 		padding: 45px 0;
-		@extend %linkNoDecoration;
-
 		&:before {
 			content: "";
 			position: absolute;
@@ -374,7 +372,6 @@
 				flex: 1 1 100%;
 			}
 		}
-		@extend %linkNoDecoration;
 	}
 	&__preview, &__current {
 		height: 380px;
@@ -474,7 +471,6 @@
 	line-height: 1.4;
 	> a {
 		color: #fff;
-		@extend %linkNoDecoration;
 	}
 	&__info {
 		width: 100%;
@@ -554,7 +550,6 @@
 		margin-bottom: .4em;
 		> a {
 			color: $white;
-			@extend %linkNoDecoration;
 		}
 	}
 	&__icon {
@@ -633,7 +628,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		@extend %linkNoDecoration;
 		> img {
 			width: auto;
 			height: 36px;
@@ -678,7 +672,6 @@
 			> li {
 				margin-right: 1em;
 				> a {
-					@extend %linkNoDecoration;
 				}
 			}
 			> li:after {

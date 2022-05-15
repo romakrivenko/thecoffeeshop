@@ -1,0 +1,112 @@
+.menu {
+  width: 100%;
+  max-height: 170px;
+  padding: 2vh 2vw;
+  position: fixed;
+  background: $greenBg;
+  color: #ffffff;
+  line-height: 1;
+  z-index: 9999;
+  transition: font-size .5s ease-in-out, padding .5s ease-in-out;
+  //@include xxl {
+  //  padding: 25px 22px 29px 18px;
+  //}
+  //@include xl {
+  //  padding: 20px 12px 22px 10px;
+  //}
+  //@include sm {
+  //  padding: 12px 8px 12px 8px;
+  //}
+  &__short {
+    width: 100%;
+    padding: 1vh 2vw;
+    max-height: 170px;
+    position: fixed;
+    background: $greenBg;
+    color: #ffffff;
+    line-height: 1;
+    z-index: 9999;
+    font-size: .6em;
+    transition: font-size .5s ease-in-out, padding .5s ease-in-out;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    white-space: pre;
+    position: relative;
+    padding: 11px 0;
+    color: #ffffff;
+    margin-left: 80px;
+    margin-top: 0;
+    @extend %linkNoDecoration;
+    @include xxl {
+      padding: 11px 0;
+      margin-left: 60px;
+    }
+    @include xl {
+      padding: 11px 0;
+      margin-left: 45px;
+    }
+    @include sm {
+      padding: 11px 0;
+      margin-left: 38px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 74px;
+      top: 0;
+      margin-left: -80px;
+      float: left;
+      background: url('../img/siberie_logo.svg') no-repeat;
+      display: block;
+      @include xxl {
+        height: 100%;
+        width: 56px;
+        margin-left: -60px;
+      }
+      @include xl {
+        height: 100%;
+        width: 44px;
+        top: 6px;
+        margin-left: -45px;
+      }
+      @include sm {
+        height: 100%;
+        width: 36px;
+        margin-left: -38px;
+        top: 6px;
+      }
+    }
+  }
+  &__icon {max-width: 86px;}
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    @include xxl {
+      display: flex;
+    }
+    @include xl {
+      display: none;
+    }
+    @include sm {
+      display: none;
+    }
+  }
+  &__item {
+    margin-left: 60px;
+    > a {
+      color: #fff;
+      @extend %linkNoDecoration;
+    }
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}

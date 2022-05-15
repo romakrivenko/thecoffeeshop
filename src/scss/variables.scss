@@ -52,10 +52,10 @@ $screen-xxl-max: 1600px;
   }
 }
 
-%linkNoDecoration {
-  text-decoration: none;
+%linkDecoration {
+  text-decoration: underline;
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 

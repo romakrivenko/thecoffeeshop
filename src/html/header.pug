@@ -1,15 +1,19 @@
 header.header
-    nav(class=['menu','title_alt'], id='menu')
+    div(class=['menu', 'title_alt'], id='menu')
         div.menu__content
-            a(href='thecoffeeshops.com').menu__logo  the coffeeshops.com
-            ul.menu__list
-                li.menu__item
-                    a(href='/') Locations
-                li.menu__item
-                    a(href='/') History
-                li.menu__item
-                    a(href='/') Exhibitions
-                li.menu__item
-                    a(href='/') Shop
-                li.menu__item
-                    a(href='/') Blog
+            a(href='thecoffeeshops.com').menu__logo
+                img(src="img/siberie_logo.svg")
+            button.hamburger
+                span
+            nav.menu__list_container(id='nav')
+                ul.menu__list
+                    li
+                        a(href='/').menu__item Locations
+                    li
+                        a(href='/').menu__item History
+                    li
+                        a(href='/').menu__item Exhibitions
+                    li
+                        a(href='/').menu__item Shop
+                    li
+                        a(href='/').menu__item Blog

@@ -1,8 +1,11 @@
 import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
 
-import * as menu from "./files/menu.js";
-menu.menuSize();
+import * as open from "./files/menu.js";
+open.openMenu();
+
+// import * as size from ".//files/menu.js";
+// size.menuSize();
 
 /*
 import Swiper, { Navigation, Pagination } from 'swiper';
