@@ -1,0 +1,114 @@
+/* Hero image block */
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  align-items: flex-start;
+}
+.bg__left, .bg__right {
+  height: 100vh;
+  flex: 1 1 50%;
+}
+
+.bg__left {
+  background: url(../img/hero_cover-l.jpg) no-repeat top center / cover;
+  //background-attachment: fixed;
+}
+.bg__right {
+  background: url(../img/hero_cover-r.jpg) no-repeat top center / cover;
+  @include sm {
+    display: none;
+  }
+  //background-attachment: fixed;
+  //display: none;
+}
+
+/* Opening hours */
+.opening_wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  z-index: 1;
+}
+.opening {
+  padding: 27px;
+  background-color: $orange;
+  margin: $centerBlock;
+  display: block;
+  bottom: 0;
+  color: $white;
+  font-weight: 400;
+  align-self: center;
+  @include xxl {
+    padding: 20px;
+  }
+  @include xl {
+    padding: 16px;
+  }
+  @include sm {
+    padding: 12px;
+  }
+}
+
+.shop_name {
+  color: $green;
+  width: 100%;
+  @extend %borders;
+  text-align: center;
+  padding: 28px 0;
+  background: $white;
+  @include xxl {
+    padding: 24px 0;
+  }
+  @include xl {
+    padding: 20px 0;
+  }
+  @include sm {
+    padding: 16px 0;
+  }
+  .title {
+    margin-bottom: 16px;
+    @include xxl {
+      margin-bottom: 12px;
+    }
+    @include xl {
+      margin-bottom: 12px;
+    }
+    @include sm {
+      margin-bottom: 8px;
+    }
+  }
+  & p {
+    @include font('Lato',33px,900,normal,uppercase,-0.0025em,normal);
+    @include xxl {
+      font-size: 28px;
+    }
+    @include xl {
+      font-size: 24px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+  }
+}
+
+.map {
+  background: url(../img/map_bg.png) no-repeat center center / cover;
+  width: 100%;
+  height: 174px;
+  overflow: hidden;
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

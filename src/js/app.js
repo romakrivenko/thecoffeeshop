@@ -4,6 +4,9 @@ flsFunctions.isWebp();
 import * as open from "./files/menu.js";
 open.openMenu();
 
+import * as scroll from "./files/scroll.js";
+scroll.scrollTop();
+
 // import * as size from ".//files/menu.js";
 // size.menuSize();
 

@@ -1,0 +1,236 @@
+/* Footer block */
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: $white;
+  line-height: 1.4;
+  background: $green;
+  &__top {
+    padding: 0 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    @include xl {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    @include sm {
+      flex-direction: column;
+    }
+  }
+  &__section {
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 33.33%;
+    margin: 1em;
+    @include xl {
+      margin: 1em 0;
+      flex: 0 1 50%;
+      justify-content: space-around;
+      &:last-child {
+        flex: 0 1 100%;
+        justify-content: center;
+      }
+    }
+    @include sm {
+      flex: 1;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+  &__logo {
+    text-align: center;
+    img {
+      max-width: 300px;
+      margin: 0 0 .5em;
+      @include lg {
+        max-width: 200px;
+      }
+    }
+    p {
+      max-width:20em;
+    }
+  }
+  &__menu {
+    margin: 0 1em;
+    &:last-child {
+      margin: 0 0 0 15%;
+    }
+  }
+  &__list {
+    margin: .5em 0 0;
+  }
+  &__item {
+    color: $white;
+    margin-bottom: 1em;
+  }
+  &__feedback {
+    p {
+      margin: .5em 0;
+    }
+  }
+  &__subscribe {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    @include sm {
+      justify-content: center;
+    }
+  }
+  &__form {
+    input[type=text] {
+      width: 100%;
+      padding: 20px;
+      margin: 8px 0;
+      display: inline-block;
+      box-sizing: border-box;
+      cursor: text;
+    }
+  }
+  &__btn {
+    input[type=submit] {
+      width: 100%;
+      padding: 20px;
+      margin: 8px 0;
+      display: inline-block;
+      box-sizing: border-box;
+      background: $orange;
+      color: $white;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    &:hover {
+      opacity: .8;
+    }
+  }
+  &__social {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    @include xl {
+      justify-content: center;
+    }
+    @include sm {
+      justify-content: center;
+    }
+  }
+  &__icon {
+    width: 64px;
+    margin-right: .3em;
+    @include xxl {
+      max-width: 44px;
+    }
+    @include xl {
+      max-width: 36px;
+    }
+    @include sm {
+      max-width: 44px;
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__language {
+    position: relative;
+    display: inline-block;
+    margin-left: 1em;
+  }
+  &__btn_lang {
+    cursor: pointer;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: auto;
+      height: 36px;
+    }
+    img:last-child {
+      width: 18px;
+      height: 9px;
+    }
+    div {
+      padding: 0 .6em;
+    }
+  }
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background: $lightGreen;
+    align-items: center;
+    font-size: 16px;
+    @include lg {
+      padding: 1em 0;
+      flex-direction: column-reverse;
+    }
+    @include sm {
+      padding: 1em 0;
+      flex-direction: column-reverse;
+    }
+  }
+  &__info {
+    flex: 0 1 auto;
+    margin: 1em;
+  }
+}
+.bottom {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    li {
+      margin-right: 1em;
+    }
+    li:after {
+      content:'|';
+      margin-left: 1em;
+    }
+    li:last-child:after {
+      content:'';
+      margin-left: 0;
+    }
+  }
+  &__item {
+    color: $white;
+  }
+}
+
+#topBtn {
+  margin: 1em;
+  height: 80px;
+  width: 80px;
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 99;
+  background: $green;
+  cursor: pointer;
+  padding: 18px 20px 20px;
+  border-radius: 50%;
+  &:hover {
+    opacity: .8;
+  }
+  @include xxl {
+    height: 60px;
+    width: 60px;
+  }
+  @include sm {
+    padding: 10px 12px 10px;
+    height: 40px;
+    width: 40px;
+    bottom: 4px;
+    right: 4px;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+}

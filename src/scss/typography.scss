@@ -55,6 +55,9 @@ body {
   @include xxl {
     font-size: 24px;
   }
+  @include lg {
+    font-size: 20px;
+  }
   @include sm {
     font-size: 16px;
   }

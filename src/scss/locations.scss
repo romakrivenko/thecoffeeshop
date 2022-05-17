@@ -1,0 +1,135 @@
+/* Locations block */
+.location {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  align-items: center;
+  text-align: center;
+  &__heading {
+    width: 100%;
+    padding: 28px 0;
+    @extend %borders;
+    @include xxl {
+      padding: 24px 0;
+    }
+    @include xl {
+      padding: 20px 0;
+    }
+    @include sm {
+      padding: 12px 0;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    @include xl {
+      flex-wrap:wrap;
+    }
+    @include sm {
+      flex-direction: column;
+    }
+  }
+  &__single {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    @include xl {
+      flex: 1 1 50%;
+    }
+    @media (max-width: #{$screen-xl-max}) {
+      &:first-child {
+        flex: 1 1 100%;
+      }
+    }
+  }
+  &__preview, &__current {
+    height: 380px;
+    @include xxl {
+      height: 340px;
+    }
+    @include xl {
+      height: 300px;
+    }
+    @include sm {
+      height: 200px;
+    }
+  }
+  &__current {
+    position: relative;
+    &:after {
+      content:'You Are Here!';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: $greenBg6;
+      color: $white;
+      padding: 4.5em 3em;
+      @include xxl {
+        padding: 6em 3em;
+      }
+      @include xl {
+        padding: 6em 10em;
+      }
+      @include sm {
+        padding: 5em 8em;
+      }
+    }
+  }
+  &__description {
+    @extend %borders;
+    padding: 28px 0 34px;
+    flex: 1;
+    @include xxl {
+      padding: 20px 0 24px;
+    }
+    @include xl {
+      padding: 16px 0 20px;
+    }
+    @include sm {
+      padding: 12px 0 16px;
+    }
+    .title_alt {
+      margin-bottom: .2em;
+    }
+
+  }
+  &__place {
+    font-size: 24px;
+    text-transform: uppercase;
+    @include xxl {
+      font-size: 20px;
+    }
+    @include xl {
+      font-size: 16px;
+    }
+    @include sm {
+      font-size: 16px;
+    }
+  }
+}
+
+.location1 {
+  background: url(../img/location-1.jpg) no-repeat center center / cover;
+}
+
+.location2 {
+  background: url(../img/location-2.jpg) no-repeat center center / cover;
+}
+
+.location3 {
+  background: url(../img/location-3.jpg) no-repeat center center / cover;
+}
+
+.location4 {
+  background: url(../img/location-4.jpg) no-repeat center center / cover;
+}
+
+.location5 {
+  background: url(../img/location-5.jpg) no-repeat center center / cover;
+}

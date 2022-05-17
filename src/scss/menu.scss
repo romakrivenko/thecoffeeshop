@@ -152,27 +152,36 @@
 }
 
 .active {
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: $greenBg;
-  z-index: 1;
-
+  @include lg {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: $greenBg;
+    z-index: 1;
+  }
 }
 
 .open span{
-  transform: scale(0);
-}
+  @include lg {
+    transform: scale(0);
+  }
+  }
 .open:before{
-  transform:rotate(45deg);
-  top: 12px;
+  @include lg {
+    transform: rotate(45deg);
+    top: 12px;
+  }
 }
 .open:after{
-  transform:rotate(-45deg);
-  bottom: 13px;
+  @include lg {
+    transform:rotate(-45deg);
+    bottom: 13px;
+  }
 }
 .lock{
-  overflow: hidden;
+  @include lg {
+    overflow: hidden;
+  }
 }

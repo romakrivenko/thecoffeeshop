@@ -1,0 +1,108 @@
+/* About block */
+
+.about {
+  width: 100%;
+  overflow: hidden;
+  @extend %borders;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    margin: 50px 0;
+    @include xxl {
+      margin: 40px 0;
+      flex-direction: row;
+    }
+    @include xl {
+      margin: 40px 0;
+      flex-direction: row;
+    }
+    @include sm {
+      margin: 24px 0;
+      flex-direction: column-reverse;
+    }
+    &:last-child {
+      flex-direction: row-reverse;
+      @include sm {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 0 80px;
+    @include xxl {
+      padding: 0 60px;
+    }
+    @include xl {
+      padding: 0 24px;
+    }
+    @include sm {
+      padding: 0 16px;
+    }
+
+    .title_alt {
+      margin: 1em 0;
+    }
+
+    .text {
+      max-width: 26em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__hours {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: center;
+    max-width: 18em;
+    align-self: center;
+  }
+
+  &__weekday {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .2em 2em;
+    @include xl {
+      padding: .2em 1.4em;
+    }
+    @include sm {
+      padding: .2em 2em;
+    }
+  }
+  .current_hours {
+    font-size: 48px;
+    text-align: left;
+    padding: .2em 0;
+    @include xxl {
+      font-size: 40px;
+    }
+    @include xl {
+      font-size: 28px;
+    }
+    @include sm {
+      font-size: 26px;
+    }
+  }
+}
