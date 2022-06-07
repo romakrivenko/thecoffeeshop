@@ -25,16 +25,13 @@
     }
   }
   &__bg-1 {
-    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 80%), url("../img/benefits-1.jpg") no-repeat right center / contain;
-    background-attachment: fixed;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 80%), url("../img/benefits-1.jpg") no-repeat fixed right center / contain;
   }
   &__bg-2 {
-    background: linear-gradient(270deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 80%), url("../img/benefits-2.jpg") no-repeat left center / contain;
-    background-attachment: fixed;
+    background: linear-gradient(270deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 80%), url("../img/benefits-2.jpg") no-repeat fixed left center / contain;
   }
   &__bg-3 {
-    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 80%), url("../img/benefits-3.jpg") no-repeat right center / contain;
-    background-attachment: fixed;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 80%), url("../img/benefits-3.jpg") no-repeat fixed right center / contain;
   }
   &__text {
     color: $green;
