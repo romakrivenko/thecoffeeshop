@@ -24,7 +24,7 @@ body {
   line-height: $lh;
 }
 
-.title, .title_alt {
+.title, .subtitle {
   @include font('Viridian',60px,400,normal,uppercase,-0.0025em,normal);
   @include xxl {
     font-size: 48px;
@@ -37,12 +37,25 @@ body {
   }
 }
 
-.title_alt {
+.subtitle {
   font-size: 30px;
   @include xxl {
     font-size: 22px;
   }
   @include xl {
+    font-size: 20px;
+  }
+  @include sm {
+    font-size: 16px;
+  }
+}
+
+.small_title {
+  @include font('Lato',30px,400,normal,uppercase,0.05em,1.2);
+  @include xxl {
+    font-size: 24px;
+  }
+  @include lg {
     font-size: 20px;
   }
   @include sm {
@@ -61,4 +74,10 @@ body {
   @include sm {
     font-size: 16px;
   }
+}
+.xsmall_title {
+  @include font('Lato',16px,400,normal,uppercase,0.05em,1.2);
+}
+.small {
+  @include font('Lato',16px,400,normal,none,0,normal);
 }

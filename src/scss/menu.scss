@@ -18,38 +18,22 @@
 }
 .menu {
   position: relative;
-  padding: 0 1em;
   width: 100%;
-  //@include lg {
-  //  position: fixed;
-  //  top: 0;
-  //  left: 0;
-  //  width: 100%;
-  //  height: 100%;
-  //  background: $greenBg;
-  //  &:before {
-  //    content: '';
-  //    position: absolute;
-  //    top: 0;
-  //    left: 0;
-  //    width: 100%;
-  //    height: 100%;
-  //    background: $greenBg;
-  //    z-index: 2;
-  //  }
-  //}
   &__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
-    height: 15vh;
+    height: 160px;
+    @include xxl {
+      height: 120px;
+    }
     @include xl {
-      height: 10vh;
+      height: 80px;
     }
     @include lg {
-      max-height: 80px;
+      height: 60px;
     }
   }
   &__logo {
@@ -57,6 +41,7 @@
     position: relative;
     overflow: hidden;
     z-index: 3;
+    margin-left: 1em;
     @include xxl {
       flex: 0 0 360px;
     }
@@ -101,20 +86,70 @@
       display: block;
     }
     li {
-      margin-left: 5%;
+      margin: 0 1.5em 0 0;
       list-style-type: none;
+      @include xl {
+        margin: 0 1em 0 0;
+      }
       @include lg {
-        margin-bottom: 1em;
+        margin: 1em 0;
       }
     }
   }
   &__item {
     color: $white;
     text-transform: uppercase;
+    position: relative;
   }
+  &__drop {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: -300px;
+    left: -3%;
+    padding: 0 3% 3%;
+    background: $greenBg;
+    z-index: -1;
+    transition: all .5s ease-in-out;
+    @include lg {
+      position: relative;
+      top: -100px;
+      left: 0;
+      padding-bottom: 1em;
+      background: none;
+      transition: all .5s ease-in-out;
+    }
+    li {
+      margin: .6em 1.5em 0 0;
+      list-style-type: none;
+      @include lg {
+        margin: 1em 0;
+      }
+    }
+  }
+}
+.show {
+  opacity: 1;
+  display: block;
+  top: 103px;
+  z-index: 0;
+  transition: all .5s ease-in-out;
+  @include xxl {
+    top: 77px;
+  }
+  @include xl {
+    top: 55px;
+  }
+  @include lg {
+    top: 0px;
+  }
+}
+.fa {
+  margin: 0 0 0 .3em;
 }
 .hamburger {
   display: none;
+  margin-right: 1em;
   @include lg {
     display: block;
     position: relative;

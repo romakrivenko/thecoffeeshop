@@ -1,16 +1,3 @@
-// window.onscroll = function() {menuSize()};
-//
-// export function menuSize() {
-//     let menuDefault = "menu"
-//     let titleAlt = "title_alt"
-//     let menuShort = "menu__short"
-//     if (document.documentElement.scrollTop > 50) {
-//         document.getElementById("menu").className = `${menuShort} ${titleAlt}`;
-//     } else {
-//         document.getElementById("menu").className = `${menuDefault} ${titleAlt}`;
-//     }
-// }
-
 export function openMenu()  {
         $('.hamburger').click(function() {
             $('.menu__list_container').toggleClass("active");
@@ -18,3 +5,23 @@ export function openMenu()  {
             $('body').toggleClass('lock');
         });
 }
+
+export function dropMenu()  {
+    $('#dropBtn').click(function() {
+        $('#dropDown').toggleClass("show");
+        $('.fa').toggleClass("fa-caret-up");
+    });
+}
+
+// export function dropMenu() {
+//     document.getElementById("dropDown").classList.toggle("show");
+// }
+//
+// window.onclick = function(e) {
+//     if (!e.target.matches('dropBtn')) {
+//         var dropDown = document.getElementById("dropDown");
+//         if (dropDown.classList.contains('show')) {
+//             dropDown.classList.remove('show');
+//         }
+//     }
+// }

@@ -1,3 +1,3 @@
-export function scrollTop() {
-        scrollTop = $(window).scrollTop();
+export function scrollTop(offsetTop) {
+    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     }

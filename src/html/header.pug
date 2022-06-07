@@ -1,19 +1,33 @@
 header.header
-    div(class=['menu', 'title_alt'], id='menu')
+    div(class=['menu', 'subtitle'], id='menu')
         div.menu__content
-            a(href='thecoffeeshops.com').menu__logo
+            a(href='/').menu__logo
                 img(src="img/siberie_logo.svg")
             button.hamburger
                 span
             nav.menu__list_container(id='nav')
                 ul.menu__list
                     li
-                        a(href='/').menu__item Locations
+                        a.menu__item(id='dropBtn') Locations
+                            i(class=['fa', 'fa-caret-down'], id='menu')
+                            ul.menu__drop(id='dropDown')
+                                li
+                                    a(href='siberie.html').menu__item Siberië
+                                li
+                                    a(href='siberie.html').menu__item De Republiek
+                                li
+                                    a(href='siberie.html').menu__item De Supermarkt
+                                li
+                                    a(href='siberie.html').menu__item Loft
+                                li
+                                    a(href='siberie.html').menu__item Espresso
                     li
-                        a(href='/history/').menu__item History
+                        a(href='history.html').menu__item History
                     li
-                        a(href='/exhibitions/').menu__item Exhibitions
+                        a(href='exhibitions.html').menu__item Exhibitions
                     li
-                        a(href='/shop/').menu__item Shop
+                        a(href='shop.html').menu__item Shop
                     li
                         a(href='blog.html').menu__item Blog
+                    li
+                        a(href='contact.html').menu__item Contact Us

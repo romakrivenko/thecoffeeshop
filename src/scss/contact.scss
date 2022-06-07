@@ -1,0 +1,33 @@
+.contact {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow: hidden;
+  margin: 180px 0;
+  text-align: center;
+  h1 {
+    margin: .5em 0;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  &__side {
+    flex: 0 1 20%;
+    text-align: left;
+    margin: 0 3em;
+    img {
+      max-width: 400px;
+    }
+    p {
+      margin: 1em 0;
+    }
+  }
+  &__center {
+    flex: 0 1 60%;
+    padding: 1em 0 0;
+  }
+}

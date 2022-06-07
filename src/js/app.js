@@ -1,16 +1,12 @@
 import * as flsFunctions from "./modules/functions.js";
+import {openMenu, dropMenu} from "./files/menu.js";
+import {scrollTop} from "./files/scroll.js";
+
 flsFunctions.isWebp();
 
-import * as open from "./files/menu.js";
-open.openMenu();
+openMenu();
 
-import * as scroll from "./files/scroll.js";
-scroll.scrollTop();
+dropMenu();
 
-// import * as size from ".//files/menu.js";
-// size.menuSize();
-
-/*
-import Swiper, { Navigation, Pagination } from 'swiper';
-const swiper = new Swiper();
-*/
+const scrollBtn = document.getElementById('topBtn');
+scrollBtn.addEventListener('click', () => scrollTop(0));

@@ -1,0 +1,27 @@
+.contact
+    h1.title Contact us
+    .contact__wrap
+        .contact__side
+            img(src="img/contact.jpg")
+        div(class=['contact__center', 'brd-t'])
+            form.form
+                label.xsmall_title(for="name") Full name #[span *]
+                input.text(type="text" placeholder="enter your name" name="name" id="name" required)
+                label.xsmall_title(for="email") Email #[span *]
+                input.text(type="email" placeholder="enter your email" name="email" id="email" required)
+                label.xsmall_title(for="case") Case reason #[span *]
+                input.text(type="text" placeholder="How can we help you?" name="case" id="case" required)
+                label.xsmall_title(for="subject") Subject #[span *]
+                input.text(type="text" placeholder="message subject" name="subject" id="subject" required)
+                label.xsmall_title(for="message") Message #[span *]
+                input.text(type="textarea" rows="4" cols="50" placeholder="message subject" name="message" id="message" required)
+                .checkbox
+                    label.small(for="checkbox") Confirm that I have read the privacy notice
+                    input(type="checkbox" placeholder="enter your email" name="checkbox" id="checkbox" required)
+                input(type="submit" value="Send" class=['btn', 'subtitle'])
+        .contact__side
+            .xsmall_title CONTACT US:
+            .small
+                p
+                    b For any questions or requests, you can contact our Customer Services by filling in the following form.
+                p The service is available from Monday to Friday, 9:30 a.m. to 6:30 p.m., excluding bank holidays.

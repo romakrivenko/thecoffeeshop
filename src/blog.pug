@@ -2,9 +2,11 @@ doctype strict
 html
     include html/head
     body
-        span(id="topNav")
         .wrapper
             include html/header
-            include html/blog_main
+            main.blog_main
+                include html/hero_blog.pug
+                include html/post
+                button(class=['load', 'btn']) Load more
             include html/footer
         script(src='../js/app.min.js')

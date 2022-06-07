@@ -19,10 +19,6 @@
 }
 
 .main {
-	//height: 100vh;
-	//background: url(../img/hero_cover.jpg) no-repeat;
-	//background-size: cover;
-	//background-position: top center;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -53,7 +49,7 @@
 	}
 	&__img {
 		width: 28px;
-		display: inlite-block;
+		display: inline-block;
 		margin: 0 .5em 0 0;
 		@include xxl {
 			width: 24px;
@@ -67,11 +63,126 @@
 	}
 }
 
+.heading {
+	width: 100%;
+	background: $white;
+	padding: 48px 0 60px;
+	text-align: center;
+	@include xxl {
+		padding: 48px 0 60px;
+	}
+	@include xl {
+		padding: 48px 0 60px;
+	}
+	@include lg {
+		padding: 48px 0 60px;
+	}
+	@include sm {
+		padding: 48px 0 60px;
+	}
+	&__narrow {
+		@extend .heading;
+		padding: 20px 0 32px;
+	}
+	&-green {
+		color: $white;
+		background: $green;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -60px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 0;
+			height: 0;
+			border-left: 60px solid transparent;
+			border-right: 60px solid transparent;
+			border-top: 60px solid $green;
+			@include lg {
+				bottom: -40px;
+				border-left: 40px solid transparent;
+				border-right: 40px solid transparent;
+				border-top: 40px solid $green;
+			}
+			@include sm {
+				bottom: -28px;
+				border-left: 28px solid transparent;
+				border-right: 28px solid transparent;
+				border-top: 28px solid $green;
+			}
+		}
+	}
+}
+
+.brd-t {
+	border-top: 6px solid $orange;
+}
+
+.brd-b {
+	border-bottom: 6px solid $orange;
+}
+
+.hidden {
+	display: none;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	input[type=text], [type=email], [type=textarea] {
+		width: 100%;
+		padding: 20px;
+		margin: .4em 0 1em;
+		display: inline-block;
+		box-sizing: border-box;
+		cursor: text;
+		border: 1px solid $green;
+	}
+	input {
+		margin-bottom: 1em;
+	}
+	input[type=checkbox] {
+		display: block;
+		width: 30px;
+		height: 30px;
+		border: 1px solid $green;
+		//-webkit-appearance: none;
+		cursor: pointer;
+		label {
+			cursor: pointer;
+		}
+	}
+	.checkbox {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		input {
+			margin: .5em .5em .5em 0;
+		}
+
+	}
+	.checkbox label:before {
+		//border-radius: 3px;
+	}
+	input[type=checkbox]:checked {
+		content: "\2713";
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+		color: $green;
+		text-align: center;
+		line-height: 15px;
+	}
+}
+
 @import "menu";
 @import "hero";
+@import "benefits";
 @import "about";
 @import "banner";
 @import "locations";
 @import "footer";
 @import "blog";
+@import "contact";
 

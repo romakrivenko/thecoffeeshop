@@ -29,9 +29,11 @@
       margin: 1em 0;
       flex: 0 1 50%;
       justify-content: space-around;
+      order:2;
       &:last-child {
         flex: 0 1 100%;
         justify-content: center;
+        order:1;
       }
     }
     @include sm {
@@ -87,10 +89,12 @@
       display: inline-block;
       box-sizing: border-box;
       cursor: text;
+      -webkit-appearance: none;
     }
   }
   &__btn {
     input[type=submit] {
+      -webkit-appearance: none;
       width: 100%;
       padding: 20px;
       margin: 8px 0;
@@ -141,6 +145,7 @@
     margin-left: 1em;
   }
   &__btn_lang {
+    -webkit-appearance: none;
     cursor: pointer;
     color: $white;
     display: flex;
