@@ -1,0 +1,101 @@
+.history {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__nav {
+    position: fixed;
+    top: 15%;
+    left: 40px;
+    padding: 1em;
+    color: $white;
+    z-index: 2;
+    .current_year {
+      &:before {
+        background: $white;
+      }
+    }
+    ul {
+      position: relative;
+      list-style-type: none;
+      &:before {
+        content:'';
+        position: absolute;
+        left: -24px;
+        top: 0;
+        background: $orange;
+        width: 8px;
+        height: 86%;
+        margin: 40px 0;
+      }
+    }
+  }
+  &__year {
+    &:before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 5px solid #f0612f;
+      border-radius: 50%;
+      font-weight: bolder;
+      background: $orange;
+      top: 32px;
+      left: -30px;
+      margin-right: 1em;
+      position: relative;
+    }
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    margin: 0 0 6em;
+    display: flex;
+    flex-direction: row;
+  }
+  &__right {
+    @include lg {
+      flex-direction: column;
+    }
+    .history__img {
+      flex: 0 1 50%;
+      @include xxl {
+        flex: 0 1 40%;
+      }
+      @include lg {
+        flex: 0 1 10%;
+        margin: 0 0 1em;
+      }
+    }
+
+  }
+  &__center {
+    &.history__img {
+      flex: 0 1 25%;
+    }
+  }
+  &__text {
+    margin: 0 2em;
+    flex: 0 1 50%;
+    @include xxl {
+      flex: 0 1 60%;
+    }
+    @include lg {
+      flex: 0 1 90%;
+    }
+    @include sm {
+      flex: 0 1 100%;
+    }
+    .subtitle {
+      margin: 2em 0;
+    }
+  }
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+}

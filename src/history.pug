@@ -4,9 +4,8 @@ html
     body
         .wrapper
             include html/header
-            main.blog_main
-                include html/hero_blog
-                include html/post
-                button(class=['load', 'btn']) Load more
+            main.main
+                include html/hero_history
+                include html/history_content
             include html/footer
         script(src='../js/app.min.js')
