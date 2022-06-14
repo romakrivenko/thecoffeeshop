@@ -1,26 +1,26 @@
 header.header
     div(class=['menu', 'subtitle'])
-        div.menu__content
+        div(class=['menu__content'] id="navbar")
             a(href='/').menu__logo
                 img(src="img/siberie_logo.svg")
             button.hamburger
                 span
             nav.menu__list_container(id='nav')
-                ul.menu__list
+                ul(class=['menu__list', 'subtitle'])
                     li
                         a.menu__item(id='dropBtn') Locations
                             i(class=['fa', 'fa-caret-down'], id='menu')
-                            ul.menu__drop(id='dropDown')
-                                li
-                                    a(href='siberie.html').menu__item Siberië
-                                li
-                                    a(href='siberie.html').menu__item De Republiek
-                                li
-                                    a(href='siberie.html').menu__item De Supermarkt
-                                li
-                                    a(href='siberie.html').menu__item Loft
-                                li
-                                    a(href='siberie.html').menu__item Espresso
+                        ul.menu__drop(id='dropDown')
+                            li
+                                a(href='siberie.html').menu__item Siberië
+                            li
+                                a(href='siberie.html').menu__item De Republiek
+                            li
+                                a(href='siberie.html').menu__item De Supermarkt
+                            li
+                                a(href='siberie.html').menu__item Loft
+                            li
+                                a(href='siberie.html').menu__item Espresso
                     li
                         a(href='history.html').menu__item History
                     li

@@ -24,41 +24,52 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-height: 60px;
     height: 160px;
+    transition: all .3s ease-in-out;
     @include xxl {
-      height: 120px;
+      height: 140px;
     }
     @include xl {
-      height: 80px;
+      height: 120px;
     }
     @include lg {
-      height: 60px;
+      height: 80px;
+    }
+    @include md {
+      height: 80px;
+    }
+    @include sm {
+      height: 80px;
     }
   }
   &__logo {
-    flex: 0 0 486px;
+    width: 480px;
     position: relative;
     overflow: hidden;
     z-index: 3;
     margin-left: 1em;
     @include xxl {
-      flex: 0 0 360px;
+      width: 420px;
     }
     @include xl {
-      flex: 0 0 322px;
+      width: 380px;
+    }
+    @include lg {
+      width: 320px;
+    }
+    @include md {
+      width: 320px;
     }
     @include sm {
-      flex: 0 0 260px;
+      width: 240px;
     }
-
     img {
-      max-width: 100%;
+      width: 100%;
       display: block;
     }
   }
   &__list_container {
-    @include lg {
+    @include md {
       position: fixed;
       top: -100%;
       left: 0;
@@ -70,6 +81,9 @@
       z-index: 2;
       font-size: 40px;
       text-align: center;
+      .subtitle {
+        font-size: 24px;
+      }
       .active {
         top: 0;
       }
@@ -82,7 +96,7 @@
     justify-content: end;
     position: relative;
     z-index: 2;
-    @include lg {
+    @include md {
       display: block;
     }
     li {
@@ -91,7 +105,7 @@
       @include xl {
         margin: 0 1em 0 0;
       }
-      @include lg {
+      @include md {
         margin: 1em 0;
       }
     }
@@ -103,46 +117,44 @@
   }
   &__drop {
     display: none;
-    opacity: 0;
     position: absolute;
-    top: -300px;
+    top: 103px;
     left: -3%;
-    padding: 0 3% 3%;
     background: $greenBg;
     z-index: -1;
-    transition: all .5s ease-in-out;
+    transition: all 0.3s ease 0s;
+    @include xxl {
+      top: 90px;
+    }
+    @include xl {
+      top: 78px;
+    }
     @include lg {
+      top: 55px;
+    }
+    @include md {
       position: relative;
-      top: -100px;
       left: 0;
-      padding-bottom: 1em;
+      top: 0;
       background: none;
-      transition: all .5s ease-in-out;
+      transition: all .3s ease-in-out;
+    }
+    @include sm {
+      top: 0;
     }
     li {
       margin: .6em 1.5em 0 0;
       list-style-type: none;
-      @include lg {
+      @include md {
         margin: 1em 0;
       }
     }
   }
 }
 .show {
-  opacity: 1;
   display: block;
-  top: 103px;
   z-index: 0;
-  transition: all .5s ease-in-out;
-  @include xxl {
-    top: 77px;
-  }
-  @include xl {
-    top: 55px;
-  }
-  @include lg {
-    top: 0px;
-  }
+  padding: 0 3% 3%;
 }
 .fa {
   margin: 0 0 0 .3em;
@@ -150,7 +162,7 @@
 .hamburger {
   display: none;
   margin-right: 1em;
-  @include lg {
+  @include md {
     display: block;
     position: relative;
     width: 30px;
@@ -218,5 +230,43 @@
 .lock{
   @include lg {
     overflow: hidden;
+  }
+}
+
+.scroll {
+  height: 120px;
+  font-size: 80%;
+  &__logo {
+    width: 22%;
+  }
+  @include xxl {
+    height: 100px;
+  }
+  @include xl {
+    height: 80px;
+  }
+  @include lg {
+    height: 60px;
+  }
+  @include sm {
+    height: 60px;
+  }
+  &__drop {
+    top: 83px;
+    @include xxl {
+      top: 70px;
+    }
+    @include xl {
+      top: 58px;
+    }
+    @include lg {
+      top: 45px;
+    }
+    @include md {
+      top: 0;
+    }
+    @include sm {
+      top: 0;
+    }
   }
 }

@@ -13,15 +13,14 @@ export function dropMenu()  {
     });
 }
 
-// export function dropMenu() {
-//     document.getElementById("dropDown").classList.toggle("show");
-// }
-//
-// window.onclick = function(e) {
-//     if (!e.target.matches('dropBtn')) {
-//         var dropDown = document.getElementById("dropDown");
-//         if (dropDown.classList.contains('show')) {
-//             dropDown.classList.remove('show');
-//         }
-//     }
-// }
+export function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        $('.menu__content').addClass("scroll");
+        $('.menu__logo').addClass("scroll__logo");
+        $('.menu__drop').addClass("scroll__drop");
+    } else {
+        $('.menu__content').removeClass("scroll");
+        $('.menu__logo').removeClass("scroll__logo");
+        $('.menu__drop').removeClass("scroll__drop");
+    }
+}

@@ -4,9 +4,15 @@ body {
   font-size: 30px;
   color: $green;
   @include xxl {
-    font-size: 24px;
+    font-size: 28px;
   }
   @include xl {
+    font-size: 24px;
+  }
+  @include lg {
+    font-size: 20px;
+  }
+  @include md {
     font-size: 20px;
   }
   @include sm {
@@ -24,12 +30,18 @@ body {
   line-height: $lh;
 }
 
-.title, .subtitle {
+.title {
   @include font('Viridian',60px,400,normal,uppercase,-0.0025em,normal);
   @include xxl {
-    font-size: 48px;
+    font-size: 52px;
   }
   @include xl {
+    font-size: 48px;
+  }
+  @include lg {
+    font-size: 36px;
+  }
+  @include md {
     font-size: 36px;
   }
   @include sm {
@@ -38,12 +50,18 @@ body {
 }
 
 .subtitle {
-  font-size: 30px;
+  @include font('Viridian',30px,400,normal,uppercase,-0.0025em,normal);
   @include xxl {
-    font-size: 22px;
+    font-size: 26px;
   }
   @include xl {
+    font-size: 24px;
+  }
+  @include lg {
     font-size: 20px;
+  }
+  @include md {
+    font-size: 16px;
   }
   @include sm {
     font-size: 16px;
@@ -53,10 +71,16 @@ body {
 .small_title {
   @include font('Lato',30px,400,normal,uppercase,0.05em,1.2);
   @include xxl {
+    font-size: 28px;
+  }
+  @include xl {
     font-size: 24px;
   }
   @include lg {
     font-size: 20px;
+  }
+  @include md {
+    font-size: 18px;
   }
   @include sm {
     font-size: 16px;
@@ -66,10 +90,16 @@ body {
 .text {
   @include font('Lato',30px,400,normal,none,0,1.4);
   @include xxl {
+    font-size: 28px;
+  }
+  @include xl {
     font-size: 24px;
   }
   @include lg {
     font-size: 20px;
+  }
+  @include md {
+    font-size: 18px;
   }
   @include sm {
     font-size: 16px;
@@ -77,7 +107,13 @@ body {
 }
 .xsmall_title {
   @include font('Lato',16px,400,normal,uppercase,0.05em,1.2);
+  @include sm {
+    font-size: 14px;
+  }
 }
 .small {
   @include font('Lato',16px,400,normal,none,0,normal);
+  @include sm {
+    font-size: 14px;
+  }
 }

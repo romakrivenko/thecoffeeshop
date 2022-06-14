@@ -15,10 +15,10 @@ $greenBg6: rgba(8, 58, 33, .6);
 $lightGreen: #8fb18f;
 
 $screen-sm-max: 576px;
-$screen-md-max: 768px;
-$screen-lg-max: 992px;
-$screen-xl-max: 1200px;
-$screen-xxl-max: 1600px;
+$screen-md-max: 1140px;
+$screen-lg-max: 1380px;
+$screen-xl-max: 1600px;
+$screen-xxl-max: 1820px;
 
 @mixin sm {
   @media (max-width: #{$screen-sm-max}) {
