@@ -84,9 +84,6 @@
       .subtitle {
         font-size: 24px;
       }
-      .active {
-        top: 0;
-      }
     }
   }
   &__list {
@@ -199,7 +196,7 @@
 }
 
 .active {
-  @include lg {
+  @include md {
     top: 0;
     left: 0;
     right: 0;
@@ -211,24 +208,24 @@
 }
 
 .open span{
-  @include lg {
+  @include md {
     transform: scale(0);
   }
-  }
+}
 .open:before{
-  @include lg {
+  @include md {
     transform: rotate(45deg);
     top: 12px;
   }
 }
 .open:after{
-  @include lg {
+  @include md {
     transform:rotate(-45deg);
     bottom: 13px;
   }
 }
 .lock{
-  @include lg {
+  @include md {
     overflow: hidden;
   }
 }
