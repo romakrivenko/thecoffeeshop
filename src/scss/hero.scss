@@ -8,6 +8,13 @@
   width: 100%;
   align-items: center;
   justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  @include lg {
+    background-attachment: scroll;
+  }
   &__hours {
     padding: 27px;
     background-color: $orange;
@@ -35,22 +42,29 @@
   }
 }
 .bg_main {
-  background: url(../img/main_bg.jpg) no-repeat fixed center / cover;
+  background-image: url(../img/main_bg.jpg);
 }
 .bg_double {
-  background: url(../img/hero_cover-l.jpg) no-repeat fixed left center, url(../img/hero_cover-r.jpg) no-repeat fixed right center;
-  background-size: 50%;
-  @include xl {
+  background-image: url(../img/hero_cover-l.jpg), url(../img/hero_cover-r.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position: left center, right center;
+  background-size: 50%, 50%;
+  @include lg {
+    background-image: url(../img/hero_cover-l.jpg);
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
   }
 }
 
 .bg_exhibitions {
-  background: url(../img/exhibitions_bg.jpg) no-repeat fixed center / cover;
+  background-image: url(../img/exhibitions_bg.jpg);
 }
 
 .bg_history {
-  background: url(../img/history_bg.jpg) no-repeat fixed center / cover;
+  background-image: url(../img/history_bg.jpg);
 }
 
 
@@ -98,7 +112,11 @@
 }
 
 .map {
-  background: url(../img/map_bg.png) no-repeat center center / cover;
+  background-image: url(../img/map_bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   width: 100%;
   height: 174px;
   overflow: hidden;

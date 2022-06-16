@@ -23,6 +23,24 @@
 	display: flex;
 	flex-direction: column;
 	flex: 1 1 auto;
+	&__post {
+		margin-top: 160px;
+		@include xxl {
+			margin-top: 140px;
+		}
+		@include xl {
+			margin-top: 120px;
+		}
+		@include lg {
+			margin-top: 80px;
+		}
+		@include md {
+			margin-top: 80px;
+		}
+		@include sm {
+			margin-top: 80px;
+		}
+	}
 }
 
 .btn {
@@ -66,25 +84,47 @@
 .heading {
 	width: 100%;
 	background: $white;
-	padding: 48px 0 60px;
+	padding: 36px 0 56px;
 	text-align: center;
+	&__border {
+		width: auto;
+		padding: 36px 2em 40px;
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		border-bottom: 6px solid $orange;
+		@include xxl {
+			padding: 24px 2em 36px;
+		}
+		@include xl {
+			padding: 20px 2em 32px;
+		}
+		@include lg {
+			padding: 18px 2em 24px;
+		}
+		@include md {
+			padding: 20px 1em 24px;
+		}
+		@include sm {
+			padding: 24px 2em 36px;
+		}
+	}
 	@include xxl {
-		padding: 48px 0 60px;
+		padding: 24px 0 40px;
 	}
 	@include xl {
-		padding: 48px 0 60px;
+		padding: 20px 0 36px;
 	}
 	@include lg {
-		padding: 48px 0 60px;
+		padding: 18px 0 32px;
+	}
+	@include md {
+		padding: 20px 0 36px;
 	}
 	@include sm {
-		padding: 48px 0 60px;
+		padding: 24px 0 40px;
 	}
-	&__narrow {
-		@extend .heading;
-		padding: 20px 0 32px;
-	}
-	&-green {
+	&--green {
 		color: $white;
 		background: $green;
 		position: relative;
