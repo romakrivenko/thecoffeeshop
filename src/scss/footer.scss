@@ -3,7 +3,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1;
   color: $white;
   line-height: 1.4;
   background: $green;
@@ -12,12 +11,16 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    @include xl {
+    @include lg {
+      padding: 0 .5em;
+    }
+    @include md {
       flex-wrap: wrap;
       flex-direction: row;
     }
     @include sm {
       flex-direction: column;
+      margin: 2em 0;
     }
   }
   &__section {
@@ -25,21 +28,29 @@
     flex-direction: row;
     flex: 0 1 33.33%;
     margin: 1em;
-    @include xl {
+    @include lg {
+      margin: 1em .5em;
+    }
+    @include md {
       margin: 1em 0;
       flex: 0 1 50%;
-      justify-content: space-around;
+      justify-content: space-evenly;
       order:2;
+      &:first-child {
+        flex: 0 1 100%;
+        justify-content: center;
+        order:3;
+      }
+    }
+    @include sm {
+      margin: .5em 0;
+      text-align: center;
+      justify-content: center;
       &:last-child {
         flex: 0 1 100%;
         justify-content: center;
         order:1;
       }
-    }
-    @include sm {
-      flex: 1;
-      text-align: center;
-      justify-content: center;
     }
   }
   &__logo {
@@ -47,6 +58,9 @@
     img {
       max-width: 300px;
       margin: 0 0 .5em;
+      @include xl {
+        max-width: 250px;
+      }
       @include lg {
         max-width: 200px;
       }
@@ -90,6 +104,9 @@
       box-sizing: border-box;
       cursor: text;
       -webkit-appearance: none;
+      @include lg {
+        padding: 12px;
+      }
     }
   }
   &__btn {
@@ -104,6 +121,9 @@
       color: $white;
       text-transform: uppercase;
       cursor: pointer;
+      @include lg {
+        padding: 12px;
+      }
     }
     &:hover {
       opacity: .8;
@@ -115,7 +135,7 @@
     flex-direction: row;
     align-items: center;
     list-style-type: none;
-    @include xl {
+    @include md {
       justify-content: center;
     }
     @include sm {
@@ -126,10 +146,10 @@
     width: 64px;
     margin-right: .3em;
     @include xxl {
-      max-width: 44px;
+      max-width: 52px;
     }
     @include xl {
-      max-width: 36px;
+      max-width: 44px;
     }
     @include sm {
       max-width: 44px;
@@ -171,7 +191,7 @@
     background: $lightGreen;
     align-items: center;
     font-size: 16px;
-    @include lg {
+    @include md {
       padding: 1em 0;
       flex-direction: column-reverse;
     }
@@ -216,10 +236,15 @@
   bottom: 10px;
   right: 20px;
   z-index: 99;
-  background: $green;
   cursor: pointer;
   padding: 18px 20px 20px;
   border-radius: 50%;
+  background: $green;
+  background-image: url(../img/btn_up.svg);
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-size: 50%;
+  transition: all .5s ease-in-out;
   &:hover {
     opacity: .8;
   }
@@ -228,11 +253,11 @@
     width: 60px;
   }
   @include sm {
-    padding: 10px 12px 10px;
-    height: 40px;
-    width: 40px;
-    bottom: 4px;
-    right: 4px;
+    margin: .5em;
+    height: 60px;
+    width: 60px;
+    bottom: 0;
+    right: 0;
   }
   img {
     width: 100%;

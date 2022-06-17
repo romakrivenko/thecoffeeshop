@@ -38,7 +38,7 @@ footer(class=['footer', 'text'])
             .footer__feedback
                 .subtitle Stay Connected
                 p Subscribe to our newsletter and stay connected!
-                    .footer__subscribe
+                    form(class=['footer__subscribe', 'text'])
                         .footer__form
                             input(type="text" placeholder="enter your email" name="email" required)
                         .footer__btn
@@ -46,10 +46,6 @@ footer(class=['footer', 'text'])
                     ul.footer__social
                         +footerIcon('/', 'fb')
                         +footerIcon('https://www.instagram.com/thecoffeeshopscom/', 'ig')
-                        //li.footer__language
-                        //    a.footer__btn_lang
-                        //        div.text English
-                        //        img(src='../img/up_arr.png')
     section.footer__bottom
         .footer__info © 2022 TheCoffeeshops.com. All rights reserved.
         .footer__info
@@ -61,4 +57,4 @@ footer(class=['footer', 'text'])
                 li
                     a(href='/').bottom__item Cookies
     a#topBtn
-        img(src='../img/btn_up.svg')
+        //img(src='../img/btn_up.svg')
