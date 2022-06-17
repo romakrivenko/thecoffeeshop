@@ -3,13 +3,6 @@
 @import "fonts";
 @import "typography";
 
-:target {
-	display: block;
-	position: relative;
-	top: -120px;
-	visibility: hidden;
-}
-
 .wrapper {
 	min-height: 100%;
 	display: flex;
