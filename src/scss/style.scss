@@ -42,6 +42,8 @@
 	color: $white;
 	display: inline-flex;
 	flex-direction: row-reverse;
+	-webkit-appearance: none;
+	width: fit-content;
 	@include font('Viridian',30px,400,normal,uppercase,-0.0025em,normal);
 	cursor: pointer;
 	@include xxl {
