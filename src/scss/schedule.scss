@@ -6,12 +6,9 @@
   @include xxl {
 
   }
-  @include lg {
+  @include sm {
     flex-direction: column-reverse;
     background: $white;
-  }
-  @include sm {
-
   }
   &__container {
     display: flex;
@@ -21,11 +18,11 @@
     @include xxl {
 
     }
-    @include lg {
-      flex: 0 1 90%;
+    @include md {
+      margin: 1em 2em;
     }
     @include sm {
-
+      flex: 0 1 100%;
     }
   }
   &__item {
@@ -33,11 +30,8 @@
     @include xxl {
 
     }
-    @include lg {
-      text-align: center;
-    }
     @include sm {
-
+      text-align: center;
     }
   }
   &__image {
@@ -55,17 +49,14 @@
     @include xxl {
 
     }
-    @include lg {
+    @include sm {
       flex-direction: column;
       text-align: center;
-    }
-    @include sm {
-
     }
   }
   &__artist {
     margin-right: 1em;
-    @include lg {
+    @include sm {
       margin-right: 0;
     }
   }
